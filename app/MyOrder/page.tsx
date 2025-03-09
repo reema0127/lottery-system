@@ -5,9 +5,9 @@ import Head from "next/head";
 import Navbar from "../Components/Navbar";
 import Cart from "../Components/Cart";
 
-export default function Home() {
+export default function MyOrder() {
   useEffect(() => {
-    document.title = "Home Page";
+    document.title = "My Order";
   }, []);
 
   return (
