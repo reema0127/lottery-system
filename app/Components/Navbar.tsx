@@ -31,31 +31,35 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 flex-grow justify-center">
           <Link
-            href="\Homepage"
-            className={`text-gray-700 hover:text-blue-600 hover:underline ${
-                pathname === "/" || pathname.startsWith("/Homepage") ? "text-blue-800 font-semibold underline" : ""
+            href="/Homepage"
+            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
+              pathname === "/" || pathname.startsWith("/Homepage")
+                ? "bg-blue-500 p-2 rounded text-white font-semibold underline hover:text-white"
+                : ""
             }`}
-            >
+          >
             Home
-            </Link>
+          </Link>
+
+
             <Link
-            href="\MyOrder"
-            className={`text-gray-700 hover:text-blue-600 hover:underline ${
+            href="/MyOrder"
+            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
                 pathname === "/" || pathname.startsWith("/MyOrder") ? "text-blue-800 font-semibold underline" : ""
             }`}
             >
             My Order
             </Link>
             <Link
-            href="\StockAvailability"
-            className={`text-gray-700 hover:text-blue-600 hover:underline ${
+            href="/StockAvailability"
+            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
                 pathname === "/" || pathname.startsWith("/StockAvailability") ? "text-blue-800 font-semibold underline" : ""
             }`}
             >
             Stock Availability</Link>
             <Link
             href="\"
-            className={`text-gray-700 hover:text-blue-600 hover:underline ${
+            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
                 pathname === "/" || pathname.startsWith("/OrderHistory") ? "text-blue-800 font-semibold underline" : ""
             }`}
             >

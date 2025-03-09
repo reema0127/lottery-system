@@ -130,6 +130,7 @@ export default function Home() {
         </div>
 
         <h1 className="font-bold text-3xl mt-10 mb-10 ml-10">NLB TICKETS</h1>
+        
 
         <div className="overflow-x-auto mb-20 ml-10">
           <div className="grid grid-cols-3 gap-6">
