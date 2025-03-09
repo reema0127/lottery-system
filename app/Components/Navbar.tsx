@@ -30,47 +30,62 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 flex-grow justify-center">
-          <Link
-            href="/Homepage"
-            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
-              pathname === "/" || pathname.startsWith("/Homepage")
-                ? "bg-blue-500 p-2 rounded text-white font-semibold underline hover:text-white"
-                : ""
-            }`}
-          >
-            Home
-          </Link>
-
-
             <Link
-            href="/MyOrder"
-            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
-                pathname === "/" || pathname.startsWith("/MyOrder") ? "text-blue-800 font-semibold underline" : ""
-            }`}
+              href="/Homepage"
+              className={`text-gray-700 p-5 hover:text-NavBlue  ${
+                pathname === "/" || pathname.startsWith("/Homepage")
+                  ? "bg-NavBlue p-5 rounded text-white font-semibold border-b-2 border-blue-700 hover:text-white "
+                  : ""
+              }`}
             >
-            My Order
+              Home
             </Link>
+
             <Link
-            href="/StockAvailability"
-            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
-                pathname === "/" || pathname.startsWith("/StockAvailability") ? "text-blue-800 font-semibold underline" : ""
-            }`}
+              href="/MyOrder"
+              className={`text-gray-700 p-5 hover:text-NavBlue  ${
+                pathname === "/" || pathname.startsWith("/MyOrder")
+                  ? "bg-NavBlue p-5 rounded text-white  hover:text-white font-semibold border-b-2 border-blue-700"
+                  : ""
+              }`}
             >
-            Stock Availability</Link>
+              My Order
+            </Link>
+
             <Link
-            href="\"
-            className={`text-gray-700 p-2 hover:text-blue-600 hover:underline ${
-                pathname === "/" || pathname.startsWith("/OrderHistory") ? "text-blue-800 font-semibold underline" : ""
-            }`}
+              href="/StockAvailability"
+              className={`text-gray-700 p-5 hover:text-NavBlue ${
+                pathname === "/" || pathname.startsWith("/StockAvailability")
+                  ? "bg-NavBlue p-5 rounded text-white font-semibold border-b-2 border-blue-700 hover:text-white"
+                  : ""
+              }`}
             >
-            Order History</Link>
+              Stock Availability
+            </Link>
+
+            <Link
+              href="/OrderHistory"
+              className={`text-gray-700 p-5 hover:text-NavBlue  ${
+                pathname === "/" || pathname.startsWith("/OrderHistory")
+                  ? "bg-NavBlue p-5 rounded text-white font-semibold border-b-2 border-blue-700 hover:text-white"
+                  : ""
+              }`}
+            >
+              Order History
+            </Link>
           </div>
 
           {/* Icons */}
           <div className="hidden md:flex space-x-4 items-center">
-            <button className="text-gray-700 hover:text-blue-600"><Search size={24} /></button>
-            <button className="text-gray-700 hover:text-blue-600"><Bell size={24} /></button>
-            <button className="text-gray-700 hover:text-blue-600"><Settings size={24} /></button>
+            <button className="text-gray-700 hover:text-blue-600">
+              <Search size={24} />
+            </button>
+            <button className="text-gray-700 hover:text-blue-600">
+              <Bell size={24} />
+            </button>
+            <button className="text-gray-700 hover:text-blue-600">
+              <Settings size={24} />
+            </button>
           </div>
         </div>
       </div>
@@ -87,9 +102,15 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link href="/about" className="block text-gray-700 hover:text-blue-600">About</Link>
-            <Link href="/services" className="block text-gray-700 hover:text-blue-600">Services</Link>
-            <Link href="/contact" className="block text-gray-700 hover:text-blue-600">Contact</Link>
+            <Link href="/about" className="block text-gray-700 hover:text-blue-600">
+              About
+            </Link>
+            <Link href="/services" className="block text-gray-700 hover:text-blue-600">
+              Services
+            </Link>
+            <Link href="/contact" className="block text-gray-700 hover:text-blue-600">
+              Contact
+            </Link>
           </div>
         </div>
       )}

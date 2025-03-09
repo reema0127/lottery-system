@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "../Components/Navbar";
+import Cart from "../Components/Cart";
 import { Bus } from 'lucide-react';
 
 interface Order {
@@ -33,6 +34,26 @@ export default function MyOrder() {
         OrderID: 601,
         price: "RS.38,400",
       },
+      {
+        name: "MR. Remand Daramasena",
+        OrderID: 600,
+        price: "RS.38,400",
+      },
+      {
+        name: "MR. Remand Daramasena",
+        OrderID: 601,
+        price: "RS.38,400",
+      },
+      {
+        name: "MR. Remand Daramasena",
+        OrderID: 600,
+        price: "RS.38,400",
+      },
+      {
+        name: "MR. Remand Daramasena",
+        OrderID: 601,
+        price: "RS.38,400",
+      },
     ];
 
     const ongoingOrdersData = orderData.map(order => ({
@@ -41,7 +62,7 @@ export default function MyOrder() {
     }));
 
     setOngoingOrders(ongoingOrdersData);
-    setDispatchedOrders([]); 
+ 
   }, []);
 
   const renderOrders = (orders: Order[]) => {
@@ -78,37 +99,30 @@ export default function MyOrder() {
       </Head>
 
       {/* Setting the background image */}
-      <div className="min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/bg.png')" }}>
+      <div className="min-h-screen bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/bg.png')" }}>
         {/* Navbar */}
         <Navbar />
-        <h1 className="font-bold text-3xl mt-24 mb-10 ml-16">MY ORDER</h1>
+        {/*Cart*/}
+        <Cart/>
+        <h1 className="font-bold text-3xl mt-24 mb-10 ml-16">PREVIOUS ORDERS</h1>
 
-        {/* New Box on Top */}
-        <div className="mx-16 mb-8 flex ">
-          <div className="bg-gray-300 p-4 rounded-lg shadow-lg w-1/4">
-            <h2 className="text-lg mt-5 font-bold mb-4 flex items-center gap-2">
-              <Bus size={30} />Bus
-            </h2>
-          </div>
+        <div className="flex gap-5 mb-12 ml-16 mt-10">
+          <label className="text-lg mt-2 font-bold text-gray-700">
+            Search Date:
+          </label>
+          <input type="date" className="p-2 border border-gray-300 rounded" />
+          <button className="bg-blue-600 text-white px-4 py-2 rounded">
+            Search
+          </button>
         </div>
-
+    
         {/* Flex container for the order boxes */}
-        <div className="flex gap-8 mx-16 mb-16 flex-wrap">
-          <div className="flex-1 bg-gray-200 p-8 rounded-lg shadow-lg overflow-y-auto max-h-80">
-            <h2 className="text-xl font-semibold mb-5">Ongoing Orders</h2>
+        <div className="flex gap-8 mx-16  flex-wrap">
+          <div className="bg-gray-200 p-8 rounded-lg shadow-lg overflow-y-auto max-h-96 w-3/4">
             {ongoingOrders === null ? (
               <p>Loading...</p>
             ) : (
               renderOrders(ongoingOrders)
-            )}
-          </div>
-
-          <div className="flex-1 bg-gray-200 p-8 rounded-lg shadow-lg overflow-y-auto max-h-80">
-            <h2 className="text-xl font-semibold mb-5">Dispatched Orders</h2>
-            {dispatchedOrders === null ? (
-              <p>Loading...</p>
-            ) : (
-              renderOrders(dispatchedOrders)
             )}
           </div>
         </div>

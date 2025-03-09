@@ -114,17 +114,17 @@ export default function Home() {
 
       {/* Main Content */}
       <div
-        className="fixed left-0 top-10 p-6 w-3/4 overflow-y-auto max-h-screen bg-cover bg-center bg-opacity-0"
+        className="fixed left-0 top-10 p-6 w-3/4 overflow-y-auto max-h-screen bg-cover bg-center "
         style={{
           backgroundImage: "url('/bg.png')",
         }}
       >
-        <div className="flex gap-5 mt-10">
+        <div className="flex gap-5  ml-10 mt-10">
           <label className="text-lg mt-2 font-bold text-gray-700">
             Search Date:
           </label>
           <input type="date" className="p-2 border border-gray-300 rounded" />
-          <button className="bg-blue-600 text-white px-4 py-2 rounded">
+          <button className="bg-NavBlue text-white px-4 py-2 rounded">
             Search
           </button>
         </div>

@@ -24,4 +24,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .cart-button{
+    @apply flex-1 bg-NavBlue text-white py-2 rounded-lg hover:bg-white hover:text-NavBlue hover:border-2 hover:border-NavBlue transition
+  }
+  .active-navlink{
+    @apply bg-NavBlue p-5 rounded text-white font-semibold border-b-2 border-blue-700 hover:text-white 
+  }
 }
